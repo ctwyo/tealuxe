@@ -1,0 +1,122 @@
+.more {
+  padding: 100px 200px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  justify-content: center;
+  background-color: #F7F2EA;
+  background-image: url('../../images/more-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.more .more__title {
+  text-align: left;
+}
+
+.more__text {
+  font-family: var(--opensans);
+  font-size: clamp(0.8125rem, 0.6855rem + 0.5645vw, 1.25rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 30px */
+}
+
+.more__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+}
+
+.more__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  justify-content: flex-end;
+  max-width: 580px;
+}
+
+.more__form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  gap: 25px;
+}
+
+.more__form-input::placeholder {
+  font-family: var(--opensans);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 30px */
+  color: #B8B58B;
+  padding-left: 15px;
+}
+
+.more__form-input {
+  border: none;
+  border-bottom: 1px solid #B8B58B;
+  height: 30px;
+  max-width: 440px;
+  width: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 30px */
+}
+
+.more__form-button {
+  padding: 12px 41px;
+  font-family: var(--opensans);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.more__checkbox input {
+  margin: 0;
+}
+
+.more__checkbox label {
+  font-family: var(--opensans);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media (width <= 1400px) {
+  .more {
+    padding: 60px 6.25rem;
+  }
+}
+
+@media (width <= 1200px) {
+  .more {
+    flex-direction: column;
+    align-items: center;
+  }
+  .more .more__title {
+    text-align: center;
+  }
+  .more__wrapper {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width <= 800px) {
+  .more {
+    padding: 60px 64px;
+  }
+}
+
+@media (width <= 600px) {
+  .more {
+    padding:  50px 10px;
+  }
+}

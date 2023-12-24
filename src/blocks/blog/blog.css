@@ -1,0 +1,137 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__list {
+  display: grid;
+  /* width: 100%; */
+  grid-template-columns: repeat(2, minmax(542px, 1fr));
+  column-gap: 58px;
+  row-gap: 40px;
+  margin-bottom: 60px;
+}
+
+.blog__item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 542px;
+}
+
+/* .blog__item-image {
+  width: 230px;
+  height: 180px;
+} */
+
+.blog__item-image img {
+  width: 230px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog__item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog__item-title {
+  font-family: var(--cormorant);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.blog__item-author {
+  font-family: var(--opensans);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.blog__item-link {
+  font-family: var(--opensans);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.blog__button {
+  font-family: var(--opensans);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 12px 41px;
+  background: transparent;
+  border: 1px solid #000;
+}
+
+@media (width <= 1200px) {
+  .blog__list {
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+}
+
+@media (width <= 1150px) {
+  .blog {
+    padding: 0 30px;
+  }
+  .blog__list {
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    justify-items: start;
+    width: 100%;
+  }
+  .blog__item:nth-of-type(2n) {
+    justify-self: end;
+  }
+}
+
+@media (width <= 768px) {
+  .blog {
+    padding: 0 64px
+  }
+  .blog__item:nth-of-type(2n) {
+    justify-self: start;
+  }
+  .blog__item {
+    justify-content: center;
+  }
+}
+
+@media (width <= 640px) {
+  .blog {
+    padding: 0 10px;
+  }
+}
+
+@media (width <= 479px) {
+  .blog__item {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 270px;
+  }
+  .blog__list {
+    grid-template-columns: minmax(270px, 1fr);
+    width: auto;
+  }
+  .blog__item-image img {
+    width: 270px;
+    height: 180px;
+  }
+  .blog {
+    padding: 0 45px;
+  }
+}

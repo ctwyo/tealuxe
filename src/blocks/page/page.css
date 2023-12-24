@@ -1,0 +1,7 @@
+.page {
+  font-family: var(--opensans);
+  /* max-width: 1600px; */
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+}

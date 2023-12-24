@@ -1,0 +1,30 @@
+{
+  "name": "gulp-preset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check ./src/**/*.{html,css,js}",
+    "format": "prettier --write ./src/**/*.{html,css,js}",
+    "lint": "stylelint ./src/**/*.css",
+    "lintfix": "stylelint ./src/**/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "build": "gulp build",
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-uglify-es": "^3.0.0",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.11.0"
+  }
+}
